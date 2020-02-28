@@ -1,0 +1,17 @@
+Package: gameicons
+Type: Package
+Title: Use game icons
+Version: 1.0.0
+Author: B. Ogan Mancarci
+Maintainer: B. Ogan Mancarci <ogan.mancarci@gmail.com>
+Description: Allows using icons from game-icons.net with a single function. CSS 
+    is taken from https://github.com/seiyria/gameicons-font/. See https://github.com/game-icons/icons/blob/master/license.txt
+    for game-icons license. Most icons are licensed under Creative Commons 3.0 BY.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Import:
+	htmltools
+Enhances:
+	stringr
+RoxygenNote: 6.1.1
