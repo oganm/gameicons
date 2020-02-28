@@ -34,4 +34,10 @@ game_icon('swordman')
 ```
 ![](man/figures/swordman.png)
 
+```r
+htmltools::html_print(tagList(shiny::actionButton('meh','meh',icon = game_icon('swordman'))))
+```
+![](man/figures/sword_button.png)
+
+
 You can list available icons with `list_icons`. This function needs the `stringr` package which is only included in `Enchances` so it won't be installed automatically on pakcage installation.
