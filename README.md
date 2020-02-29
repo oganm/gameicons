@@ -35,6 +35,16 @@ htmltools::html_print(tagList(shiny::actionButton('meh','meh',icon = game_icon('
 
 ![](man/figures/sword_button.png)
 
-You can list available icons with `list_icons`. This function needs the
-`stringr` package which is only included in `Enchances` so it won’t be
-installed automatically on pakcage installation.
+You can list available icons, their authors and the license they were
+released under using `list_icons`.
+
+``` r
+head(list_icons())
+#>                   icon       author   license
+#> 1         police-badge Andy Meneely CC BY 3.0
+#> 2           pistol-gun John Colburn CC BY 3.0
+#> 3               arrest   Delapouite CC BY 3.0
+#> 4        banging-gavel   Delapouite CC BY 3.0
+#> 5 chalk-outline-murder   Delapouite CC BY 3.0
+#> 6              convict   Delapouite CC BY 3.0
+```

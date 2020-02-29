@@ -27,6 +27,5 @@ game_icon = function(icon, class = NULL, style = NULL){
 #' so it might not be installed
 #' @export
 list_icons = function(){
-	readLines(system.file('game-icons/game-icons.css',package = 'gameicons')) %>%
-		paste0(collapse = '\n') %>% stringr::str_extract_all('(?<=game-icon-).*?(?=:)')
+	iconTable
 }
