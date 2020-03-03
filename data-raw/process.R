@@ -1,11 +1,8 @@
 devtools::load_all()
-library(gh)
 library(magrittr)
 library(dplyr)
 
 
-token = readLines('data-raw/auth')
-Sys.setenv(GITHUB_PAT = token)
 
 
 unlink('inst/game-icons',recursive = TRUE)
@@ -65,6 +62,9 @@ nonStandardLicense = licenseFile[authorLines] %>% grepl('CC0',.)
 licenseData = data.frame(author = c(licenseAuthors,'various-artists'), license = 'CC BY 3.0',stringsAsFactors = FALSE)
 
 licenseData$license[nonStandardLicense] = 'CC0'
+licenseData$license[licenseData$author == 'various-artists'] = 'CC0'
+
+
 
 licenseData %<>% mutate(authorMin = tolower(author) %>% gsub(' ','-',.))
 
