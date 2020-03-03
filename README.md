@@ -30,7 +30,7 @@ game_icon('swordman')
 ![](man/figures/swordman.png)
 
 ``` r
-htmltools::html_print(tagList(shiny::actionButton('meh','meh',icon = game_icon('swordman'))))
+htmltools::html_print(shiny::actionButton('meh','Sword Dude',icon = game_icon('swordman')))
 ```
 
 ![](man/figures/sword_button.png)
